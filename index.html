@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>
+      /* Rule 1  1,1,0  */
+      #main-wrapper .btn {
+        color: red;
+      }
+
+      /* Rule 2  0,2,0 */
+      :where(#main-wrapper) .btn.primary {
+        color: blue;
+      }
+
+      /* Rule 3  2,0,0*/
+      :is(#main-wrapper, .card-container) #checkout-btn {
+        color: green;
+      }
+
+      /* Rule 4  0,2,1*/
+      .card-container button:not(.disabled) {
+        color: orange;
+      }
+    </style>
   </head>
   <body>
     <div id="main-wrapper" class="card-container">
       <button id="checkout-btn" class="btn primary">Checkout</button>
     </div>
+
+    <!-- the color is green -->
   </body>
 </html>
