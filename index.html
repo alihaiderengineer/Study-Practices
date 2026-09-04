@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+      .linear {
+        background-image: linear-gradient(to right, red, blue);
+      }
+
+      .radical {
+        background-image: radial-gradient(circle at top left, red 20%, blue);
+      }
+      .cosnic {
+        background-image: conic-gradient(red 50%, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="linear"></div>
+    <div class="radical"></div>
+    <div class="cosnic"></div>
+  </body>
+</html>
