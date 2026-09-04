@@ -3,109 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Production CSS Challenge</title>
+    <title>Document</title>
     <style>
-      @layer reset, features;
-      @layer reset {
-        *,
-        *::before,
-        *::after {
-          margin: 0;
-          padding: 0;
-          box-sizing: inherit;
-        }
-
-        html {
-          box-sizing: border-box;
-        }
-
-        body {
-          width: 100%;
-          min-height: 100dvh;
-          display: flex;
-          flex-flow: column nowrap;
-          /* justify-content: center;/ */
-          align-items: center;
-          line-height: 1.5;
-        }
+      div {
+        color: blue;
+        block-size: 700px;
       }
-
-      @layer features {
-        .featured-card {
-          max-inline-size: 420px;
-          margin-block-end: 30px;
-          background-image: linear-gradient(
-            to right,
-            grey,
-            rgba(0, 0, 0, 0.482)
-          );
-          .card-img {
-            display: block;
-            max-inline-size: 100%;
-            inline-size: 100%;
-            block-size: 240px;
-            object-fit: cover;
-          }
-
-          .card-body {
-            /* tum ne padding kaha ha yahan margin ana chya tha phr hi to collapse situation ay gi */
-            margin: 24px;
-            display: flex;
-            flex-flow: column nowrap;
-
-            .card-title {
-              margin-top: 32px;
-            }
-
-            .card-btn {
-              margin-top: 20px;
-              inline-size: 100px;
-              padding: 5px 10px;
-              margin-inline-start: auto;
-            }
-          }
-        }
+      :target {
+        scroll-margin-block: 50px;
       }
     </style>
   </head>
   <body>
-    <!-- English Card (LTR) -->
-    <article class="featured-card" dir="ltr">
-      <!-- Image placeholder from Unsplash -->
-      <img
-        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-        alt="Laptop with code"
-        class="card-img"
-      />
+    <div class="div1">
+      div1
+      <a href="#div3">go to 3</a>
+    </div>
+    <div id="div2">
+      div2
 
-      <div class="card-body">
-        <h2 class="card-title">Modern Web CSS</h2>
-        <p class="card-text">
-          Mastering images, box models, and logical properties like a senior
-          front-end engineer.
-        </p>
-        <button class="card-btn">Read Article</button>
-      </div>
-    </article>
-
-    <br /><br />
-
-    <!-- Urdu Card (RTL) -->
-    <article class="featured-card" dir="rtl">
-      <img
-        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-        alt="Laptop with code"
-        class="card-img"
-      />
-
-      <div class="card-body">
-        <h2 class="card-title">جدید ویب سی ایس ایس</h2>
-        <p class="card-text">
-          ایمیجز، باکس ماڈلز اور لاجیکل پراپرٹیز کو ایک سینیئر انجینئر کی طرح
-          ماسٹر کریں۔
-        </p>
-        <button class="card-btn">مضمون پڑھیں</button>
-      </div>
-    </article>
+      <a href="#div1">go to 1</a>
+    </div>
+    <div id="div3">
+      div3
+      <a href="#div2">go to 2</a>
+    </div>
   </body>
 </html>
